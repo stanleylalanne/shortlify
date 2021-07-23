@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form(name="shorten_ulr", method="POST", actions="/")
+        div.input.col-md-8.offset-md-2
+            .mb-3
+                label.form-label(for='url') Your link
+                input#urlInput.form-control(type='text' name='url' placeholder='http://example.com')
+                input(type="submit", value="Shorten")
